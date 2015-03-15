@@ -14,8 +14,8 @@
 - *autoconf* only has a base set of macros, *aclocal* provides macros for *automake* and other custom libraries.
 - After creating *configure.ac*, use run the following set of commands to generate files.
 
-    $ aclocal
-    $ autoconf
+        $ aclocal
+        $ autoconf
 
 ## automake
 
@@ -23,7 +23,7 @@
 - The beauty of *Makefile.am* is that you only specify the target file and the source file, the rest of the details are plugged in by the tool.
 - *automake* compiles the *Makefile.am* file to a *Makefile.in* file which is very close to being a *Makefile* but lacks infromaiton which is plugged in by *configure* like the name of the compiler.
 
-    $ automake --add-missing --foreign
+        $ automake --add-missing --foreign
 
 - **add-missing** generates additional missing files like **install-sh**. **foreign** instructs _automake_ that we are not following *GNU* standard.
 
@@ -31,7 +31,7 @@
 
 - When using tools from the *autotools* suite, we have to make sure that the tools are run in the correct order, which become kind of a pain when we start using additional tools like autolib. This pain is mitigated by *autoreconf* which executes all these tools in the right order.
 
-    $ autoreconf --install --verbose
+        $ autoreconf --install --verbose
 
 
 
